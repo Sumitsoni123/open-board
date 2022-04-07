@@ -1,6 +1,6 @@
 const express = require("express");
 const socket = require("socket.io");
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const app = express();  // initialize and server ready
 app.use(express.static("public")); // to display static html page present in public folder
