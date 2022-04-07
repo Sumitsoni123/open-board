@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.option-cont {
+    height: 4rem;
+    width: 3.5rem;
+    background-color: #F7F5F2;
+    top: 2rem;
+    left: 3rem;
+    position: absolute;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.tool-cont {
+    padding: 1rem;
+    display: flex;
+    height: 5rem;
+    width: 55vw;
+    background-color: #f1f2f6;
+    justify-content: space-around;
+    position: absolute;
+    top: 2rem;
+    left: 25vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.scale-tools {
+    animation-name: scale-tools;
+    animation-duration: 1s;
+}
+
+@keyframes scale-tools {
+    0% {
+        transform: scale(0.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.tool-cont>* {
+    display: block;
+    width: 4rem;
+}
+
+.pencil-tool-cont {
+    background-color: #f1f2f6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 7rem;
+    height: 5rem;
+    position: absolute;
+    top: 7rem;
+    left: 25vw;
+    border-radius: 5%;
+    display: none;
+}
+
+.pencil-width-cont {
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pencil-width-cont input {
+    width: 80%;
+}
+
+.pencil-color-cont {
+    height: calc(100% - 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pencil-color {
+    width: 1rem;
+    height: 1rem;
+}
+
+.black {
+    background-color: black;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.eraser-tool-cont {
+    width: 7rem;
+    height: 2rem;
+    background-color: #f1f2f6;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 7rem;
+    left: 33vw;
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.eraser-tool-cont input {
+    width: 80%;
+}
+ 
+.sticky-cont {
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    top: 10rem;
+    left: 10rem;
+}
+
+.header-cont {
+    height: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f1f2f6;
+}
+
+.header-cont>* {
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+
+.minimize {
+    background-color: #20bf6b;
+}
+
+.minimize:hover {
+    cursor: pointer;
+}
+
+.remove {
+    background-color: #eb3b5a;
+}
+
+.remove:hover {
+    cursor: pointer;
+}
+
+.note-cont {
+    height: calc(100% - 2rem);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+textarea {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: x-large;
+}
+
+
+img {
+    height: 100%;
+    width: 100%;
+}

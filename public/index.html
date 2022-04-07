@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Open-Board</title>
+</head>
+
+<body>
+    <div class="option-cont">
+        <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+
+    <div class="tool-cont scale-tools">
+        <img class="pencil" src="icons/pencil.svg" alt="pencil">
+        <img class="eraser" src="icons/eraser.svg" alt="eraser">
+        <img class="download" src="icons/download.svg" alt="download">
+        <img class="upload" src="icons/upload.svg" alt="upload">
+        <img class="sticky" src="icons/todo.svg" alt="sticky">
+        <img class="redo" src="icons/redo.svg" alt="redo">
+        <img class="undo" src="icons/undo.svg" alt="undo">
+    </div>
+
+
+    <div class="pencil-tool-cont">
+        <div class="pencil-width-cont">
+            <input type="range" min="2" max="10" value="3" class="pencil-width" />
+        </div>
+ 
+        <div class="pencil-color-cont">
+            <div class="black pencil-color"></div>
+            <div class="red pencil-color"></div>
+            <div class="blue pencil-color"></div>
+        </div>
+    </div>
+
+    <div class="eraser-tool-cont">
+        <input type="range" min="10" max="30" value="10" class="eraser-width" />
+    </div>
+
+    <canvas></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"
+        integrity="sha512-MgkNs0gNdrnOM7k+0L+wgiRc5aLgl74sJQKbIWegVIMvVGPc1+gc1L2oK9Wf/D9pq58eqIJAxOonYPVE5UwUFA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--connect frontend to backend server  -->
+    <script>
+        let socket = io.connect("http://localhost:3000");
+    </script>
+    <script src="./tool.js"></script>
+    <script src="./canvas.js"></script>
+</body>
+
+</html>
